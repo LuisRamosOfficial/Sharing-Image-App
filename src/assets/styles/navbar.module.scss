@@ -1,0 +1,14 @@
+nav.navbar {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 70px;
+    background-color: rgb(45, 45, 45);
+    align-items: center;
+    p {
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+}
