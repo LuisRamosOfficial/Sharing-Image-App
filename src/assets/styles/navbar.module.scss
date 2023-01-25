@@ -1,14 +1,100 @@
 nav.navbar {
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    height: 70px;
-    background-color: rgb(45, 45, 45);
-    align-items: center;
-    p {
-        font-size: 1.8rem;
-        font-weight: 700;
-    }
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	height: 70px;
+	justify-content: space-between;
+	background-color: #1e1e1e;
+	border-bottom: 5px solid #2c2c2c;
+	align-items: center;
+	p {
+		margin-left: 2rem;
+		font-size: 1.8rem;
+		font-weight: 700;
+	}
+	button.Login {
+		margin-right: 5rem;
+		padding: 0.7rem 1.5rem;
+		font-weight: 900;
+		background-color: #58b242;
+		border: none;
+		border-radius: 40px;
+		font-size: 1.3rem;
+		cursor: pointer;
+		&:hover {
+			background-color: #509b3d;
+		}
+	}
+	div.Profile {
+		margin-right: 5rem;
+		display: flex;
+		align-items: center;
+		gap: 3rem;
+		img.Pic {
+			width: 50px;
+			border-radius: 30px;
+		}
+		button.Upload {
+			img {
+				width: 20px;
+				margin-right: 10px;
+			}
+			padding: 0.7rem 1.5rem;
+			font-weight: 900;
+			background: none;
+			outline: solid rgb(80, 80, 80) 2px;
+			border: none;
+			border-radius: 20px;
+			font-size: 1.3rem;
+			cursor: pointer;
+			&:hover {
+				background-color: rgb(80, 80, 80);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	nav.navbar {
+		p {
+			margin-left: 0.5rem;
+			font-size: 0.9rem;
+		}
+		button.Login {
+			margin-right: 2rem;
+			padding: 0.5rem 1rem;
+			font-size: 1.1rem;
+		}
+		div.Profile {
+			display: flex;
+			align-items: center;
+			margin-right: 1rem;
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			img.Pic {
+				width: 50px;
+				border-radius: 30px;
+			}
+			button.Upload {
+				img {
+					width: 20px;
+					margin-right: 10px;
+				}
+				padding: 0.5rem 1.1rem;
+				font-weight: 900;
+				background: none;
+				outline: solid rgb(80, 80, 80) 2px;
+				border: none;
+				border-radius: 20px;
+				font-size: 0.9rem;
+				cursor: pointer;
+				&:hover {
+					background-color: rgb(80, 80, 80);
+				}
+			}
+		}
+	}
 }
