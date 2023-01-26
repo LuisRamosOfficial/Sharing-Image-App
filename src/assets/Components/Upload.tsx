@@ -53,6 +53,7 @@ const UploadImage: FC<UploadImage> = ({ file, firebase }) => {
 	const storage = getStorage(firebase);
 	const db = getFirestore(firebase);
     const today = new Date().toLocaleDateString();
+	const now = Date.now();
     const [description, setDescription] = useState<String>('')
     const [uploading, setUploading] = useState<boolean>(false)
 
@@ -70,6 +71,7 @@ const UploadImage: FC<UploadImage> = ({ file, firebase }) => {
 
 		try {
 			const docRef = await addDoc(collection(db, 'Posts'), {
+				now: now,
 				ImageId: id,
 				ImageURL: ImageURL,
 				user: loginInfo.Name,

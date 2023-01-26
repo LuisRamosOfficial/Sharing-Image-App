@@ -20,6 +20,7 @@ const Content: FC<Props> = ({ firebase }) => {
 			querySnapshot.forEach((doc) => {
 				data.push(doc.data());
 			});
+      data.sort((a, b) => b.now - a.now);
 			setPosts(data);
 			setLoading(false);
 		};
